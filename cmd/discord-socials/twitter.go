@@ -23,15 +23,15 @@ func init() {
 type twitterCmdOptions struct {
 	Token string
 
-	ChannelID       string `envconfig:"CHANNEL_ID"`
+	ChannelID string `envconfig:"CHANNEL_ID"`
 
 	TwitterConsumerKey       string `envconfig:"TWITTER_CONSUMER_KEY"`
 	TwitterConsumerSecret    string `envconfig:"TWITTER_CONSUMER_SECRET"`
 	TwitterAccessToken       string `envconfig:"TWITTER_ACCESS_TOKEN"`
 	TwitterAccessTokenSecret string `envconfig:"TWITTER_ACCESS_TOKEN_SECRET"`
 
-	EnableAntiSpam bool `envconfig:"ENABLE_ANTI_SPAM"`
-	Hashyags bool `envconfig:"HASHTAGS"`
+	EnableAntiSpam bool   `envconfig:"ENABLE_ANTI_SPAM"`
+	Hashtags       string `envconfig:"HASHTAGS"`
 }
 
 // NewTwitterCmd generates the `twitter` command
